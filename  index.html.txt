@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanya's Coaching</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #db3d44;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .testimonial {
+      background: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 4px solid #db3d44;
+    }
+    .language-toggle {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vanya's Personal Training</h1>
+    <p>Transform your body. Empower your mind.</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#booking">Booking</a>
+    <a href="#blog">Blog</a>
+  </nav>
+  <div class="container">
+    <div class="language-toggle">
+      <button onclick="toggleLanguage('en')">EN</button>
+      <button onclick="toggleLanguage('bg')">BG</button>
+    </div>
+
+    <section id="home">
+      <h2 lang="en">Welcome to Vanya's Coaching!</h2>
+      <h2 lang="bg" style="display:none;">Добре дошли при Ваня!</h2>
+      <p lang="en">I’m Vanya, a certified personal trainer helping women become stronger, healthier, and more confident.</p>
+      <p lang="bg" style="display:none;">Аз съм Ваня – сертифициран треньор, който помага на жените да станат по-силни, по-здрави и уверени.</p>
+    </section>
+
+    <section id="testimonials">
+      <h2 lang="en">Client Testimonials</h2>
+      <h2 lang="bg" style="display:none;">Отзиви от клиенти</h2>
+      <div class="testimonial" lang="bg">Силвия: Прекрасен треньор и преди всичко човек...</div>
+      <div class="testimonial" lang="bg">Десислава: Ваня не е само треньор, тя е вдъхновение...</div>
+      <div class="testimonial" lang="bg">Кристина: Благодаря ти, Ваня!...</div>
+    </section>
+
+    <section id="booking">
+      <h2 lang="en">Book a Session</h2>
+      <h2 lang="bg" style="display:none;">Запази тренировка</h2>
+      <p lang="en">Use the form below to book your personal training session.</p>
+      <p lang="bg" style="display:none;">Използвай формата по-долу, за да запазиш своята тренировка.</p>
+      <iframe src="https://formspree.io/f/your-form-id" width="100%" height="300" frameborder="0"></iframe>
+    </section>
+
+    <section id="blog">
+      <h2 lang="en">Blog</h2>
+      <h2 lang="bg" style="display:none;">Блог</h2>
+      <p lang="en">Coming soon: Fitness tips, nutrition advice, and client success stories!</p>
+      <p lang="bg" style="display:none;">Очаквайте скоро: съвети за фитнес, хранене и истории на успеха!</p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Vanya's Coaching</p>
+  </footer>
+
+  <script>
+    function toggleLanguage(lang) {
+      document.querySelectorAll('[lang]').forEach(el => {
+        el.style.display = (el.getAttribute('lang') === lang) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
